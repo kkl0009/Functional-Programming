@@ -1,0 +1,16 @@
+;;
+;; Name: Kollin Labowski
+;; Class: CS 310
+;; Academic Integrity Statement: This program complies with the academic
+;; integrity policy for the university and for CS 310
+;;
+
+(defn append [lizt1 lizt2]
+    (if (empty? lizt1) 
+        lizt2 
+        (cons 
+            (first lizt1) 
+            (append(rest lizt1) lizt2)))
+)
+
+(print (append (list 'T 'E 'S 'T) (list (list 'C 'A) 'S 'E)))

@@ -1,0 +1,11 @@
+--
+-- Name: Kollin Labowski
+-- Class: CS 310
+-- Academic Integrity Statement: This program complies with the academic
+-- integrity policy for the university and for CS 310
+--
+
+main = print $ append [5, 5, 5, 7, 4, 3] [1, 0, -3]
+
+append lizt1 lizt2  | (null lizt1) = lizt2
+                    | otherwise = (head lizt1) : (append (tail lizt1) lizt2)

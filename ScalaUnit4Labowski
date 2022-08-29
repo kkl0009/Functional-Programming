@@ -1,0 +1,22 @@
+/*
+* Name: Kollin Labowski
+* Class: CS 310
+* Academic Integrity Statement: This program complies with the academic
+* integrity policy for the university and for CS 310
+*/
+
+object ScalaUnit4Labowski {
+    def main(args: Array[String]) {
+        val test = new AppClass[Int]
+        println(test.append(List(1, 2, 3, 80, 6), List(4, 5, 6, 4, 23, -2)))
+    } 
+}
+
+class AppClass[A] {
+    def append(lizt1 : List[A], lizt2 : List[A]) : List[A] = {
+        if(lizt1.isEmpty)
+            return lizt2
+        else
+            return (lizt1.head :: append(lizt1.tail, lizt2))
+    }
+}
